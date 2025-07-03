@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="game-container bg-white p-8 rounded-lg shadow-xl text-center max-w-md w-full">
+        <h1 class="text-4xl font-bold mb-6 text-gray-800">Rock Paper Scissors</h1>
+
+        <!-- Score display area -->
+        <div class="score-board flex justify-around mb-8 text-2xl font-semibold">
+            <div class="player-score text-blue-600">
+                Player: <span id="player-score">0</span>
+            </div>
+            <div class="computer-score text-red-600">
+                Computer: <span id="computer-score">0</span>
+            </div>
+        </div>
+
+        <!-- Game choices buttons -->
+        <div class="choices grid grid-cols-3 gap-4 mb-8">
+            <button id="rock" class="choice-btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Rock
+            </button>
+            <button id="paper" class="choice-btn bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Paper
+            </button>
+            <button id="scissors" class="choice-btn bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Scissors
+            </button>
+        </div>
+
+        <!-- Result display area -->
+        <div class="result-display mb-8">
+            <p id="player-choice" class="text-lg text-gray-700 mb-2">Your choice: -</p>
+            <p id="computer-choice" class="text-lg text-gray-700 mb-4">Computer's choice: -</p>
+            <p id="game-result" class="text-3xl font-bold text-gray-900">Choose your move!</p>
+        </div>
+
+        <!-- Play again button, initially hidden -->
+        <button id="play-again-btn" class="hidden bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            Play Again
+        </button>
+    </div>
+
+    <!-- Link to the JavaScript file for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>

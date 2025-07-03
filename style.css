@@ -1,0 +1,158 @@
+/* style.css */
+
+/* Basic body styling */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font, fallback to sans-serif */
+    background-color: #f3f4f6; /* Light gray background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 1rem; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Game container styling */
+.game-container {
+    background-color: #ffffff; /* White background */
+    padding: 2rem; /* Ample padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    text-align: center;
+    max-width: 480px; /* Max width for responsiveness */
+    width: 100%; /* Full width on smaller screens */
+}
+
+/* Heading styling */
+h1 {
+    color: #1f2937; /* Dark gray color */
+    margin-bottom: 1.5rem; /* Space below heading */
+}
+
+/* Score board styling */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem; /* Space below score board */
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold */
+}
+
+.player-score {
+    color: #2563eb; /* Blue color for player score */
+}
+
+.computer-score {
+    color: #dc2626; /* Red color for computer score */
+}
+
+/* Choices buttons container */
+.choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid for buttons */
+    gap: 1rem; /* Gap between buttons */
+    margin-bottom: 2rem; /* Space below choices */
+}
+
+/* Choice button styling */
+.choice-btn {
+    padding: 1rem 1.5rem; /* Padding inside buttons */
+    border-radius: 0.5rem; /* Rounded corners for buttons */
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Button shadow */
+}
+
+/* Specific button colors (Tailwind classes are used in HTML, but demonstrating here for clarity if custom CSS was needed) */
+.choice-btn#rock {
+    background-color: #3b82f6; /* Blue */
+}
+.choice-btn#paper {
+    background-color: #22c55e; /* Green */
+}
+.choice-btn#scissors {
+    background-color: #ef4444; /* Red */
+}
+
+/* Hover effects for buttons */
+.choice-btn:hover {
+    transform: translateY(-3px) scale(1.02); /* Slight lift and scale on hover */
+    box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15), 0 3px 6px -2px rgba(0, 0, 0, 0.08); /* Enhanced shadow on hover */
+}
+
+/* Active state for buttons (when clicked) */
+.choice-btn:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.06); /* Reduced shadow */
+}
+
+/* Result display styling */
+.result-display {
+    margin-bottom: 2rem; /* Space below result display */
+}
+
+.result-display p {
+    color: #374151; /* Darker gray text */
+    line-height: 1.5;
+}
+
+#game-result {
+    font-size: 2.25rem; /* Larger font for game result */
+    font-weight: 700; /* Bold */
+    color: #111827; /* Very dark gray */
+}
+
+/* Play again button styling */
+#play-again-btn {
+    background-color: #8b5cf6; /* Purple color */
+    padding: 0.75rem 1.5rem; /* Padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Shadow */
+}
+
+#play-again-btn:hover {
+    background-color: #7c3aed; /* Darker purple on hover */
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15), 0 3px 6px -2px rgba(0, 0, 0, 0.08);
+}
+
+#play-again-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Utility class for hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .score-board {
+        font-size: 1.25rem; /* Adjust score font size */
+    }
+
+    .choice-btn {
+        padding: 0.75rem 1rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+
+    #game-result {
+        font-size: 1.75rem; /* Adjust result font size */
+    }
+}
